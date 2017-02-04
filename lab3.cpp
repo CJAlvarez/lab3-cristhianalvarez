@@ -120,10 +120,10 @@ void calendar(){
 		int centuriof = formatDate[0]%100;
 		int dia;
 
-cout << formatDate[0] << " - " << formatDate[1] << " - " << formatDate[2] << " | " << centurioi<<centuriof << endl;
-		dia = ( formatDate[2] + (((formatDate[1] + 1) * 26)/10) + centuriof + (centuriof/4) + (centurioi/4) + (5 * centurioi)) ;
+//cout << formatDate[0] << " - " << formatDate[1] << " - " << formatDate[2] << " | " << centurioi<<centuriof << endl;
+		dia =(-1)* (( formatDate[2] + (((formatDate[1] + 1) * 26)/10) + centuriof + (centuriof/4) + (centurioi/4) -  (2 * centurioi))%7)-1 ;
 		cout << dia << endl;
-cout << (dia % 7) << "Help"<< endl;
+//cout << (dia % 7)-9 << " Help"<< endl;
 
 //		cout << dayName[dia] << endl;
 		// Agregar a la lista
@@ -131,10 +131,10 @@ cout << (dia % 7) << "Help"<< endl;
 		temp[0] = formatDate[0];
 		temp[1] = formatDate[1];
 		temp[2] = formatDate[2];
-//		temp[3] = ;
+		temp[3] = dayName[dia];
 		
 		allDates.resize(allDates.size()+2);
-		
+		cout << temp[3+1] << " " << formatDate[2] << " " << formatDate[1] << " " << formatDate[0] << endl;
 	
 
 		int option;
